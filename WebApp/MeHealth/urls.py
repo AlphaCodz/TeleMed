@@ -1,7 +1,9 @@
-from django.urls import path
+from django.urls import path, re_path
 from .views import index
 from . import views
 
 urlpatterns = [
-    path("index", views.index, name="index")   
+    path("index", views.index, name="index"),
+    re_path("doctors",views.doctors, name="doctors")
+     
 ]
