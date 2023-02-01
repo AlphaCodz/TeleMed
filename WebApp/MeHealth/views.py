@@ -7,3 +7,6 @@ def index(request):
 
 def doctors(request):
     return render(request,"doctors.html")
+
+def data(request):
+    return render(request, "data.html")
