@@ -3,8 +3,8 @@ from .views import index
 from . import views
 
 urlpatterns = [
-    re_path("index", views.index, name="index"),
-    re_path("doctors",views.doctors, name="doctors"),
+    path("home/", views.index, name="index"),
+    re_path(r"^doctors/$",views.doctors, name="doctors"),
     re_path("data", views.data, name="medical_data")
      
 ]
