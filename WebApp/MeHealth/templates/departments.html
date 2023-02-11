@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -16,7 +17,7 @@
   <title> Orthoc </title>
 
   <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -25,12 +26,12 @@
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
 
   <!-- font awesome style -->
-  <link href="css/font-awesome.min.css" rel="stylesheet" />
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
   <!-- responsive style -->
-  <link href="css/responsive.css" rel="stylesheet" />
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
 
 </head>
 
@@ -103,7 +104,7 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s1.png" alt="">
+                <img src="{% static 'images/s1.png' %}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -118,7 +119,7 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s2.png" alt="">
+                <img src="{% static 'images/s2.png' %}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -133,7 +134,7 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s3.png" alt="">
+                <img src="{% static 'images/s3.png' %}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -148,7 +149,7 @@
           <div class="col-md-3">
             <div class="box ">
               <div class="img-box">
-                <img src="images/s4.png" alt="">
+                <img src="{% static 'images/s4.png' %}" alt="">
               </div>
               <div class="detail-box">
                 <h5>
@@ -169,6 +170,10 @@
       </div>
     </div>
   </section>
+
+  <!-- VIDEO CALLING SECTION -->
+
+  <iframe src="https://me-health.whereby.com/demo-e8663174-473a-4834-9ac0-f6e648945922" allow="camera; microphone; fullscreen; speaker; display-capture" style="height: 700px; width: 100%"></iframe>
 
   <!-- end department section -->
 

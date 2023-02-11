@@ -5,7 +5,7 @@ class Doctors(models.Model):
     name = models.CharField(max_length=300)
     specialty = models.CharField(max_length=100)
     about = models.TextField(null=True, blank=True)
-    profile_image = models.ImageField(upload_to="doctor_profile/", null=False)
+    profile_image = models.ImageField(upload_to="", null=True)
     
     def __str__(self):
         return self.name

@@ -66,10 +66,10 @@
                 <a class="nav-link" href=""> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="departments.html">Departments</a>
+                <a class="nav-link" href="{% url 'med:consult' %}">Departments</a>
               </li>
               <li class="nav-item active">
-                <a class="nav-link" href="{% url 'med:doctors' %}">Doctors <span class="sr-only">(current)</span> </a>
+                <a class="nav-link" href="{% url 'med:get_doctors' %}">Doctors <span class="sr-only">(current)</span> </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'med:medical_data' %}">Medical Data</a>
@@ -96,14 +96,14 @@
           Our Doctors
         </h2>
         <p class="col-md-10 mx-auto px-0">
-          Incilint sapiente illo quo praesentium officiis laudantium nostrum, ad adipisci cupiditate sit, quisquam aliquid. Officiis laudantium fuga ad voluptas aspernatur error fugiat quos facilis saepe quas fugit, beatae id quisquam.
-        </p>
+          Observation, Reason, Human Understanding, Courage; these make the physician. Wear the white coat with dignity and pride—it is an honor and privilege to get to serve the public as a physician.
       </div>
+    {% for doctors in doctors %}
       <div class="row">
         <div class="col-sm-6 col-lg-4 mx-auto">
           <div class="box">
             <div class="img-box">
-              <img src="{% static 'images/d1.jpg' %}" alt="">
+              <img src="{{doctors.profile_image.url}}" alt="">
             </div>
             <div class="detail-box">
               <div class="social_box">
@@ -120,66 +120,9 @@
                   <i class="fa fa-linkedin" aria-hidden="true"></i>
                 </a>
               </div>
+              
               <h5>
-                Elina Josh
-              </h5>
-              <h6 class="">
-                Doctor
-              </h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src="{% static 'images/d2.jpg' %}" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="social_box">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </div>
-              <h5>
-                Adam View
-              </h5>
-              <h6 class="">
-                Doctor
-              </h6>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src="{% static 'images/d3.jpg' %}" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="social_box">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </div>
-              <h5>
-                Mia Mike
+                {{doctors.specialty}}{{doctors.name}}
               </h5>
               <h6 class="">
                 Doctor
@@ -188,14 +131,13 @@
           </div>
         </div>
       </div>
-      <div class="btn-box">
-        <a href="">
-          View All
-        </a>
+
+     {% endfor %} 
       </div>
+      </section>
+      </body>
     </div>
   </section>
-
   <!-- end doctor section -->
 
   <!-- footer section -->
@@ -211,19 +153,19 @@
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
                 <span>
-                  Location
+                  Yaba College of Technology 
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
                 <span>
-                  Call +01 1234567890
+                  Call +2349017166035
                 </span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
                 <span>
-                  demo@gmail.com
+                  yctcomputerscience@gmail.com
                 </span>
               </a>
             </div>
@@ -246,10 +188,10 @@
         <div class="col-md-6 col-lg-3 footer_col">
           <div class="footer_detail">
             <h4>
-              About
+              About Us
             </h4>
             <p>
-              Beatae provident nobis mollitia magnam voluptatum, unde dicta facilis minima veniam corporis laudantium alias tenetur eveniet illum reprehenderit fugit a delectus officiis blanditiis ea.
+              We're ND3 Computer Science Students at Yaba College of Technology, This is our Final Year Project. It's a Telemedicine website where our users can reach out to doctors and other medical personnels through our webapp.
             </p>
           </div>
         </div>
@@ -292,9 +234,9 @@
       <div class="footer-info">
         <p>
           &copy; <span id="displayYear"></span> All Rights Reserved By
-          <a href="https://html.design/">Free Html Templates<br><br></a>
+          <a href="https://html.design/">Alpha Leader<br><br></a>
             &copy; <span id="displayYear"></span> Distributed By
-            <a href="https://themewagon.com/">ThemeWagon</a>
+            <a href="https://themewagon.com/">Alpha Leader</a>
         </p>
       </div>
     </div>
