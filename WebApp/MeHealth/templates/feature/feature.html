@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>video call</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./feature.css" />
+  </head>
+  <body>
+    <h1>The video call feature</h1>
+
+    <!-- The call button -->
+    <button class="btn" id="call">Call</button>
+
+    <!-- The video call window, will display on button click -->
+    <section class="call--container hide" id="container">
+      <!-- the close call window button -->
+      <div class="close" id="close">
+        <img alt="close window" src="./icons8-close-50.png" />
+      </div>
+
+      <!-- the holder of the room iframe -->
+      <div id="hold"></div>
+    </section>
+
+    <script async defer>
+      //init variables
+      let call = document.getElementById("call");
+      let container = document.getElementById("container");
+      let close = document.getElementById("close");
+
+      //this will be your whereby room URL created with whereby API
+      let roomUrl = "https://whereby.com/khalteck";
+
+      call.addEventListener("click", () => {
+        container.classList.remove("hide");
+        container.lastElementChild.innerHTML = `<iframe
+            class="window"
+            src="${roomUrl}"
+            allow="camera; microphone; fullscreen; speaker; display-capture; autoplay"
+         ></iframe>`;
+      });
+
+      close.addEventListener("click", () => {
+        container.classList.add("hide");
+        container.lastElementChild.innerHTML = "";
+      });
+    </script>
+  </body>
+</html>
