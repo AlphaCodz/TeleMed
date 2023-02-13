@@ -22,3 +22,6 @@ class Consult(ListView):
     model = Doctors
     template_name="departments.html"
     context_object_name = "consultants"
+    
+def VideoCall(request):
+    return render(request, "feature.html")

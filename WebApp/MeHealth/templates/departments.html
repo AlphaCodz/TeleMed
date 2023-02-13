@@ -13,6 +13,7 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link rel="shortcut icon" href="images/favicon.png" type="">
+  <link rel="stylesheet" href="{% static 'css/feature.css' %}" />
 
   <title> Orthoc </title>
 
@@ -163,22 +164,37 @@
           </div>
         </div>
         <div class="btn-box">
-          <a href="">
-            View All
+          <a id="call">
+             Call a Doctor Now
           </a>
+          
         </div>
       </div>
     </div>
   </section>
 
   <!-- VIDEO CALLING SECTION -->
+  <section class="call--container hide" id="container">
+    <!-- the close call window button -->
+    <div class="close" id="close">
+      <img alt="close window" src="{% static 'images/icons8-close-50.png' %}" />
+    </div>
 
-  <iframe src="https://me-health.whereby.com/demo-e8663174-473a-4834-9ac0-f6e648945922" allow="camera; microphone; fullscreen; speaker; display-capture" style="height: 700px; width: 100%"></iframe>
+    <!-- the holder of the room iframe -->
+    <div id="hold">
+      
+    </div>
+  </section>
+
+  <!-- The video call window, will display on button click -->
+ 
+
+  <!-- <iframe src="https://me-health.whereby.com/demo-e8663174-473a-4834-9ac0-f6e648945922" allow="camera; microphone; fullscreen; speaker; display-capture" style="height: 700px; width: 100%"></iframe> -->
 
   <!-- end department section -->
 
   <!-- footer section -->
-  <footer class="footer_section">
+  <!-- <footer class="footer_section">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-3 footer_col">
@@ -278,7 +294,7 @@
       </div>
     </div>
   </footer>
-  <!-- footer section -->
+  footer section -->
 
   <!-- jQery -->
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
@@ -293,8 +309,32 @@
   <!-- custom js -->
   <script type="text/javascript" src="js/custom.js"></script>
   <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  
+  <script async defer>
+    //init variables
+    let call = document.getElementById("call");
+    let container = document.getElementById("container");
+    let close = document.getElementById("close");
+
+    //this will be your whereby room URL created with whereby API
+    let roomUrl = "https://whereby.com/khalteck";
+
+    call.addEventListener("click", () => {
+      container.classList.remove("hide");
+      container.lastElementChild.innerHTML = `<iframe
+          class="window"
+          src="${roomUrl}"
+          allow="camera; microphone; fullscreen; speaker; display-capture; autoplay"
+       ></iframe>`;
+    });
+
+    close.addEventListener("click", () => {
+      container.classList.add("hide");
+      container.lastElementChild.innerHTML = "";
+    });
   </script>
+
   <!-- End Google Map -->
 
 </body>

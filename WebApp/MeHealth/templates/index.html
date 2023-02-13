@@ -67,7 +67,7 @@
                 <a class="nav-link" href="about.html"> About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="{% url 'med:consult' %}">Consult</a>
+                <a class="nav-link" href="{% url 'med:video_call' %}">Consult</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="{% url 'med:get_doctors' %}">Doctors</a>
@@ -99,8 +99,8 @@
                       MeHealth is developing digital health solutions such as mobile telehealth to improve Basic HealthCare in Nigeria and reduce the costs of traditional healthcare delivery models that prevent many from accessing essential services.
                     </p>
                     <div class="btn-box">
-                      <a href="" class="btn1">
-                        Register
+                      <a href="{% url 'med:consult' %}" class="btn1">
+                        Meet a Doctor
                       </a>
                     </div>
                   </div>
