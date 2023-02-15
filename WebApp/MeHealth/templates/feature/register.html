@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Register</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <section class="first--section">
+      <div class="container">
+        <h1 class="login--text">SIGN UP</h1>
+        <form id="reg_form">
+          <input
+            type="text"
+            id="first_name"
+            placeholder="First name"
+            class="form--input"
+            required
+          />
+          <input
+            type="text"
+            id="last_name"
+            placeholder="Last name"
+            class="form--input"
+            required
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            class="form--input"
+            required
+          />
+          <div class="w-full relative">
+            <input
+              type="password"
+              id="password"
+              placeholder="Password"
+              class="form--input"
+              required
+            />
+          </div>
+          <input type="submit" class="form--submit" />
+          <p class="already">
+            Already registered? <a href="./login.html">Login</a>
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <script async defer>
+      const form = document.getElementById("reg_form");
+      const submitButton = form.querySelector('input[type="submit"]');
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent form submission
+        const firstName = form.querySelector("#first_name").value;
+        const lastName = form.querySelector("#last_name").value;
+        const email = form.querySelector("#email").value;
+        const password = form.querySelector("#password").value;
+
+        const data = new URLSearchParams();
+        data.append("first_name", firstName);
+        data.append("last_name", lastName);
+        data.append("email", email);
+        data.append("password", password);
+
+        fetch(
+          "https://genericapi-production.up.railway.app/my_patient/create/patient",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: data,
+          }
+        )
+          .then((response) => {
+            response.json();
+          })
+          .then((data) => {
+            console.log("sent successfully");
+            window.location.href = "../index.html";
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      });
+    </script>
+  </body>
+</html>

@@ -2,652 +2,677 @@
 
 <!DOCTYPE html>
 <html>
+  <head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      rel="shortcut icon"
+      href="{% static 'images/favicon.png' %}"
+      type=""
+    />
 
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="">
+    <title>MeHealth</title>
 
-  <title> MeHealth </title>
+    <!-- bootstrap core css -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/bootstrap.css' %}"
+    />
 
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+    <!-- fonts style -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- fonts style -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--owl slider stylesheet -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
 
-  <!--owl slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- font awesome style -->
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
 
-  <!-- font awesome style -->
-  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  </head>
 
-  <!-- Custom styles for this template -->
-  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <body>
+    <div class="hero_area">
+      <div class="hero_bg_box">
+        <img src="{% static 'images/hero-bg.png' %}" alt="" />
+      </div>
 
-</head>
+      <!-- header section strats -->
+      <header class="header_section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html">
+              <span> Me.Health </span>
+            </a>
 
-<body>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class=""> </span>
+            </button>
 
-  <div class="hero_area">
-
-    <div class="hero_bg_box">
-      <img src="{% static 'images/hero-bg.png' %}" alt="">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'med:index' %}"
+                    >Home <span class="sr-only">(current)</span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'med:video_call' %}"
+                    >Consult</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'med:get_doctors' %}"
+                    >Doctors</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'med:medical_data' %}"
+                    >Medical Data</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <!-- end header section -->
+      <!-- slider section -->
+      <section class="slider_section">
+        <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="detail-box">
+                      <h1>Healthcare at your Fingertips</h1>
+                      <p>
+                        Conventional healthcare delivery systems require
+                        patients to travel to a dedicated healthcare facility
+                        often concentrated in large cities. While many health
+                        issues require treatment in person, consultations,
+                        check-ups, and other diagnostics can be done effectively
+                        via mobile platforms. MeHealth is developing digital
+                        health solutions such as mobile telehealth to improve
+                        Basic HealthCare in Nigeria and reduce the costs of
+                        traditional healthcare delivery models that prevent many
+                        from accessing essential services.
+                      </p>
+                      <div class="btn-box">
+                        <a
+                          href="./feature/register.html{% url 'med:consult' %}"
+                          class="btn1"
+                        >
+                          Meet a Doctor
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="detail-box">
+                      <h1>We Provide Best Online Healthcare</h1>
+                      <p>
+                        What is online healthcare? Telehealth is the use of
+                        digital information and communication technologies to
+                        access health care services remotely and manage your
+                        health care. Technologies can include computers and
+                        mobile devices, such as tablets and smartphones.
+                        Providing You with the best E-Healthcare Service is our
+                        priority as ensuring that you get better as soon as
+                        possible
+                      </p>
+                      <div class="btn-box">
+                        <a href="" class="btn1"> Read More </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-7">
+                    <div class="detail-box">
+                      <h1>ME.HEALTH = MY HEALTH</h1>
+                      <p>
+                        Online healthcare is affordable and saves a lot of time.
+                        It is highly cost-effective for patients who need
+                        regular doctor visits. Visiting costs, transportation
+                        costs, and time are the major benefits of online
+                        consultation At Me.Health, you can get all these for
+                        Free! Isn't that awesome?
+                      </p>
+                      <div class="btn-box">
+                        <a href="" class="btn1"> Read More </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="carousel-indicators">
+            <li
+              data-target="#customCarousel1"
+              data-slide-to="0"
+              class="active"
+            ></li>
+            <li data-target="#customCarousel1" data-slide-to="1"></li>
+            <li data-target="#customCarousel1" data-slide-to="2"></li>
+          </ol>
+        </div>
+      </section>
+      <!-- end slider section -->
     </div>
 
-    <!-- header section strats -->
-    <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-            <span>
-              Me.Health
-            </span>
-          </a>
+    <!-- department section -->
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class=""> </span>
-          </button>
-
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="{% url 'med:index' %}">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'med:video_call' %}">Consult</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'med:get_doctors' %}">Doctors</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'med:medical_data' %}">Medical Data</a>
-              </li>
-            </ul>
+    <section class="department_section layout_padding">
+      <div class="department_container">
+        <div class="container">
+          <div class="heading_container heading_center">
+            <h2>Our Departments</h2>
+            <p>
+              Our medical personnel are trained experts and specialists in the
+              following fields
+            </p>
           </div>
-        </nav>
-      </div>
-    </header>
-    <!-- end header section -->
-    <!-- slider section -->
-    <section class="slider_section ">
-      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      Healthcare at your Fingertips
-                    </h1>
-                    <p>
-                      Conventional healthcare delivery systems require patients to travel to a dedicated healthcare facility often concentrated in large cities. While many health issues require treatment in person, consultations, check-ups, and other diagnostics can be done effectively via mobile platforms. 
-
-                      MeHealth is developing digital health solutions such as mobile telehealth to improve Basic HealthCare in Nigeria and reduce the costs of traditional healthcare delivery models that prevent many from accessing essential services.
-                    </p>
-                    <div class="btn-box">
-                      <a href="{% url 'med:consult' %}" class="btn1">
-                        Meet a Doctor
-                      </a>
-                    </div>
-                  </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{% static 'images/s1.png' %}" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Cardiology</h5>
+                  <p>
+                    Cardiologists are qualified to treat heart attacks, heart
+                    failure, heart valve disease, arrhythmia, and high blood
+                    pressure. They also specialize in specific areas, such as
+                    abnormal heart rhythms, heart failures
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="carousel-item ">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      We Provide Best Online Healthcare
-                    </h1>
-                    <p>
-                      What is online healthcare?
-Telehealth is the use of digital information and communication technologies to access health care services remotely and manage your health care. Technologies can include computers and mobile devices, such as tablets and smartphones. Providing You with the best E-Healthcare Service is our priority as ensuring that you get better as soon as possible
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Read More
-                      </a>
-                    </div>
-                  </div>
+            <div class="col-md-3">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{% static 'images/s2.png' %}" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Diagnosis</h5>
+                  <p>
+                    Diagnostic tests are an important element of clinical
+                    practise because they help doctors to determine if a patient
+                    has or does not have a certain disease
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container ">
-              <div class="row">
-                <div class="col-md-7">
-                  <div class="detail-box">
-                    <h1>
-                      ME.HEALTH = MY HEALTH
-                    </h1>
-                    <p>
-                      Online healthcare is affordable and saves a lot of time. It is highly cost-effective for patients who need regular doctor visits. Visiting costs, transportation costs, and time are the major benefits of online consultation
-                      At Me.Health, you can get all these for Free! Isn't that awesome?
-                    </p>
-                    <div class="btn-box">
-                      <a href="" class="btn1">
-                        Read More
-                      </a>
-                    </div>
-                  </div>
+            <div class="col-md-3">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{% static 'images/s3.png' %}" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>Surgery</h5>
+                  <p>
+                    The surgeon is responsible for the preoperative diagnosis of
+                    the patient, for performing the operation, and for providing
+                    the patient with postoperative surgical care and treatment
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{% static 'images/s4.png' %}" alt="" />
+                </div>
+                <div class="detail-box">
+                  <h5>First Aid</h5>
+                  <p>
+                    When it comes to more serious injuries, first aid provides
+                    an essential role in keeping a casualty from getting worse
+                    and helps to stabilise their condition before professional
+                    help can arrive
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <ol class="carousel-indicators">
-          <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
-          <li data-target="#customCarousel1" data-slide-to="1"></li>
-          <li data-target="#customCarousel1" data-slide-to="2"></li>
-        </ol>
       </div>
-
     </section>
-    <!-- end slider section -->
-  </div>
 
+    <!-- end department section -->
 
-  <!-- department section -->
+    <!-- about section -->
 
-  <section class="department_section layout_padding">
-    <div class="department_container">
-      <div class="container ">
+    <section class="about_section layout_margin-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="img-box">
+              <img src="{% static 'images/about-img.jpg' %}" alt="" />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>About <span>Us</span></h2>
+              </div>
+              <p>
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable. If you are going to use a passage of Lorem
+                Ipsum, you need to be sure there isn't anything embarrassing
+                hidden in the middle of text. All
+              </p>
+              <a href=""> Read More </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- end about section -->
+
+    <!-- doctor section -->
+
+    <section class="doctor_section layout_padding">
+      <div class="container">
         <div class="heading_container heading_center">
-          <h2>
-            Our Departments
-          </h2>
-          <p>
-            Our medical personnel are trained experts and specialists in the following fields
+          <h2>Our Doctors</h2>
+          <p class="col-md-10 mx-auto px-0">
+            Our Doctors are well trained, selfless and brilliant in their work.
+            Our Reputation precedes us. Checkout our best amongst the best
+            doctors on our team
           </p>
         </div>
         <div class="row">
-          <div class="col-md-3">
-            <div class="box ">
+          <div class="col-sm-6 col-lg-4 mx-auto">
+            <div class="box">
               <div class="img-box">
-                <img src="{% static 'images/s1.png' %}" alt="">
+                <img src="{% static 'images/d1.jpg' %}" alt="" />
               </div>
               <div class="detail-box">
-                <h5>
-                  Cardiology
-                </h5>
-                <p>
-                  Cardiologists are qualified to treat heart attacks, heart failure, heart valve disease, arrhythmia, and high blood pressure. They also specialize in specific areas, such as abnormal heart rhythms, heart failures 
-                </p>
+                <div class="social_box">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <h5>Elina Josh</h5>
+                <h6 class="">Doctor</h6>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="box ">
+          <div class="col-sm-6 col-lg-4 mx-auto">
+            <div class="box">
               <div class="img-box">
-                <img src="{% static 'images/s2.png' %}" alt="">
+                <img src="{% static 'images/d2.jpg' %}" alt="" />
               </div>
               <div class="detail-box">
-                <h5>
-                  Diagnosis
-                </h5>
-                <p>
-                  Diagnostic tests are an important element of clinical practise because they help doctors to determine if a patient has or does not have a certain disease
-                </p>
+                <div class="social_box">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <h5>Adam View</h5>
+                <h6 class="">Doctor</h6>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="box ">
+          <div class="col-sm-6 col-lg-4 mx-auto">
+            <div class="box">
               <div class="img-box">
-                <img src="{% static 'images/s3.png' %}" alt="">
+                <img src="{% static 'images/d3.jpg' %}" alt="" />
               </div>
               <div class="detail-box">
-                <h5>
-                  Surgery
-                </h5>
-                <p>
-                  The surgeon is responsible for the preoperative diagnosis of the patient, for performing the operation, and for providing the patient with postoperative surgical care and treatment
-                </p>
+                <div class="social_box">
+                  <a href="">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                  </a>
+                  <a href="">
+                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  </a>
+                </div>
+                <h5>Mia Mike</h5>
+                <h6 class="">Doctor</h6>
               </div>
             </div>
           </div>
-          <div class="col-md-3">
-            <div class="box ">
-              <div class="img-box">
-                <img src="{% static 'images/s4.png' %}" alt="">
-              </div>
-              <div class="detail-box">
-                <h5>
-                  First Aid
-                </h5>
-                <p>
-                  When it comes to more serious injuries, first aid provides an essential role in keeping a casualty from getting worse and helps to stabilise their condition before professional help can arrive
-                </p>
+        </div>
+        <div class="btn-box">
+          <a href=""> View All </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- end doctor section -->
+
+    <!-- contact section -->
+    <section class="contact_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>Get In Touch</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form_container contact-form">
+              <form action="">
+                <div class="form-row">
+                  <div class="col-lg-6">
+                    <div>
+                      <input type="text" placeholder="Your Name" />
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div>
+                      <input type="text" placeholder="Phone Number" />
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <input type="email" placeholder="Email" />
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    class="message-box"
+                    placeholder="Message"
+                  />
+                </div>
+                <div class="btn_box">
+                  <button>SEND</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="map_container">
+              <div class="map">
+                <div id="googleMap"></div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+    <!-- end contact section -->
 
-  <!-- end department section -->
+    <!-- client section -->
 
-  <!-- about section -->
-
-  <section class="about_section layout_margin-bottom">
-    <div class="container  ">
-      <div class="row">
-        <div class="col-md-6 ">
-          <div class="img-box">
-            <img src="{% static 'images/about-img.jpg' %}" alt="">
-          </div>
+    <section class="client_section layout_padding-bottom">
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>Testimonial</h2>
         </div>
-        <div class="col-md-6">
-          <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                About <span>Us</span>
-              </h2>
+        <div
+          id="carouselExample2Controls"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="{% static 'images/client.jpg' %}" alt="" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6>Alan Emerson</h6>
+                      </div>
+                      <p>
+                        Enim consequatur odio assumenda voluptas voluptatibus
+                        esse nobis officia. Magnam, aspernatur nostrum
+                        explicabo, distinctio laudantium delectus deserunt quia
+                        quidem magni corporis earum inventore totam consectetur
+                        corrupti! Corrupti, nihil sunt? Natus.
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <p>
-              There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-              in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-              are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-              the middle of text. All
-            </p>
-            <a href="">
-              Read More
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="{% static 'images/client.jpg' %}" alt="" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6>Alan Emerson</h6>
+                      </div>
+                      <p>
+                        The importance of TeleHealth in the 21st Century cannot
+                        be over emphasized, Me.Health by YCT ND3 computer
+                        science students has proved that you can do a lot
+                        through technology
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row">
+                <div class="col-md-11 col-lg-10 mx-auto">
+                  <div class="box">
+                    <div class="img-box">
+                      <img src="{% static 'images/client.jpg' %}" alt="" />
+                    </div>
+                    <div class="detail-box">
+                      <div class="name">
+                        <h6>Seun Adeyemi</h6>
+                      </div>
+                      <p>
+                        The importance of TeleHealth in the 21st Century cannot
+                        be over emphasized, Me.Health by YCT ND3 computer
+                        science students has proved that you can do a lot
+                        through technology
+                      </p>
+                      <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel_btn-container">
+            <a
+              class="carousel-control-prev"
+              href="#carouselExample2Controls"
+              role="button"
+              data-slide="prev"
+            >
+              <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselExample2Controls"
+              role="button"
+              data-slide="next"
+            >
+              <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+              <span class="sr-only">Next</span>
             </a>
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- end about section -->
+    <!-- end client section -->
 
-  <!-- doctor section -->
-
-  <section class="doctor_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Our Doctors
-        </h2>
-        <p class="col-md-10 mx-auto px-0">
-        Our Doctors are well trained, selfless and brilliant in their work.
-        Our Reputation precedes us. Checkout our best amongst the best doctors on our team
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src="{% static 'images/d1.jpg' %}" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="social_box">
+    <!-- footer section -->
+    <footer class="footer_section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 footer_col">
+            <div class="footer_contact">
+              <h4>Reach at..</h4>
+              <div class="contact_link_box">
                 <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  <span> Yaba College of Technology </span>
                 </a>
                 <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <span> Call +2349017166035 </span>
                 </a>
                 <a href="">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                  <i class="fa fa-envelope" aria-hidden="true"></i>
+                  <span> yctcomputerscience@gmail.com </span>
                 </a>
               </div>
-              <h5>
-                Elina Josh
-              </h5>
-              <h6 class="">
-                Doctor
-              </h6>
+            </div>
+            <div class="footer_social">
+              <a href="">
+                <i class="fa fa-facebook" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+              </a>
+              <a href="">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src="{% static 'images/d2.jpg' %}" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="social_box">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
-              </div>
-              <h5>
-                Adam View
-              </h5>
-              <h6 class="">
-                Doctor
-              </h6>
+          <div class="col-md-6 col-lg-3 footer_col">
+            <div class="footer_detail">
+              <h4>About</h4>
+              <p>
+                We're ND3 Computer Science Students at Yaba College of
+                Technology, This is our Final Year Project. It's a Telemedicine
+                website where our users can reach out to doctors and other
+                medical personnels through our webapp.
+              </p>
             </div>
           </div>
-        </div>
-        <div class="col-sm-6 col-lg-4 mx-auto">
-          <div class="box">
-            <div class="img-box">
-              <img src="{% static 'images/d3.jpg' %}" alt="">
-            </div>
-            <div class="detail-box">
-              <div class="social_box">
-                <a href="">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-youtube" aria-hidden="true"></i>
-                </a>
-                <a href="">
-                  <i class="fa fa-linkedin" aria-hidden="true"></i>
-                </a>
+          <div class="col-md-6 col-lg-2 mx-auto footer_col">
+            <div class="footer_link_box">
+              <h4>Links</h4>
+              <div class="footer_links">
+                <a class="active" href="index.html"> Home </a>
+                <a class="" href="about.html"> About </a>
+                <a class="" href="departments.html"> Departments </a>
+                <a class="" href="doctors.html"> Doctors </a>
+                <a class="" href="contact.html"> Contact Us </a>
               </div>
-              <h5>
-                Mia Mike
-              </h5>
-              <h6 class="">
-                Doctor
-              </h6>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="btn-box">
-        <a href="">
-          View All
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- end doctor section -->
-
-  <!-- contact section -->
-  <section class="contact_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Get In Touch
-        </h2>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form_container contact-form">
-            <form action="">
-              <div class="form-row">
-                <div class="col-lg-6">
-                  <div>
-                    <input type="text" placeholder="Your Name" />
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div>
-                    <input type="text" placeholder="Phone Number" />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <input type="email" placeholder="Email" />
-              </div>
-              <div>
-                <input type="text" class="message-box" placeholder="Message" />
-              </div>
-              <div class="btn_box">
-                <button>
-                  SEND
-                </button>
-              </div>
+          <div class="col-md-6 col-lg-3 footer_col">
+            <h4>Newsletter</h4>
+            <form action="#">
+              <input type="email" placeholder="Enter email" />
+              <button type="submit">Subscribe</button>
             </form>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="map_container">
-            <div class="map">
-              <div id="googleMap"></div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </section>
-  <!-- end contact section -->
+    </footer>
+    <!-- footer section -->
 
-  <!-- client section -->
-
-  <section class="client_section layout_padding-bottom">
-    <div class="container">
-      <div class="heading_container heading_center ">
-        <h2>
-          Testimonial
-        </h2>
-      </div>
-      <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="{% static 'images/client.jpg' %}" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                        Alan Emerson
-                      </h6>
-                    </div>
-                    <p>
-                      Enim consequatur odio assumenda voluptas voluptatibus esse nobis officia. Magnam, aspernatur nostrum explicabo, distinctio laudantium delectus deserunt quia quidem magni corporis earum inventore totam consectetur corrupti! Corrupti, nihil sunt? Natus.
-                    </p>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="{% static 'images/client.jpg' %}" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                        Alan Emerson
-                      </h6>
-                    </div>
-                    <p>
-                      The importance of TeleHealth in the 21st Century cannot be over emphasized, Me.Health by YCT ND3 computer science students has proved that you can do a lot through technology
-                    </p>
-                    <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="row">
-              <div class="col-md-11 col-lg-10 mx-auto">
-                <div class="box">
-                  <div class="img-box">
-                    <img src="{% static 'images/client.jpg' %}" alt="" />
-                  </div>
-                  <div class="detail-box">
-                    <div class="name">
-                      <h6>
-                        Seun Adeyemi
-                      </h6>
-                    </div>
-                    <p>
-                      The importance of TeleHealth in the 21st Century cannot be over emphasized, Me.Health by YCT ND3 computer science students has proved that you can do a lot through technology
-                    </p>
-                      <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="carousel_btn-container">
-          <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
-            <i class="fa fa-long-arrow-left" aria-hidden="true"></i>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
-            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end client section -->
-
-  <!-- footer section -->
-  <footer class="footer_section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_contact">
-            <h4>
-              Reach at..
-            </h4>
-            <div class="contact_link_box">
-              <a href="">
-                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span>
-                  Yaba College of Technology
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>
-                  Call +2349017166035
-                </span>
-              </a>
-              <a href="">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span>
-                  yctcomputerscience@gmail.com
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="footer_social">
-            <a href="">
-              <i class="fa fa-facebook" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-twitter" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-linkedin" aria-hidden="true"></i>
-            </a>
-            <a href="">
-              <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 footer_col">
-          <div class="footer_detail">
-            <h4>
-              About
-            </h4>
-            <p>
-              We're ND3 Computer Science Students at Yaba College of Technology, This is our Final Year Project. It's a Telemedicine website where our users can reach out to doctors and other medical personnels through our webapp.
-            </p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-2 mx-auto footer_col">
-          <div class="footer_link_box">
-            <h4>
-              Links
-            </h4>
-            <div class="footer_links">
-              <a class="active" href="index.html">
-                Home
-              </a>
-              <a class="" href="about.html">
-                About
-              </a>
-              <a class="" href="departments.html">
-                Departments
-              </a>
-              <a class="" href="doctors.html">
-                Doctors
-              </a>
-              <a class="" href="contact.html">
-                Contact Us
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3 footer_col ">
-          <h4>
-            Newsletter
-          </h4>
-          <form action="#">
-            <input type="email" placeholder="Enter email" />
-            <button type="submit">
-              Subscribe
-            </button>
-          </form>
-        </div>
-      </div> 
-    </div>
-  </footer>
-  <!-- footer section -->
-
-  <!-- jQery -->
-  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
-  <!-- popper js -->
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <!-- bootstrap js -->
-  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
-  <!-- owl slider -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <!-- custom js -->
-  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
-  <!-- Google Map -->
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
-  </script>
-  <!-- End Google Map -->
-
-</body>
-
+    <!-- jQery -->
+    <script
+      type="text/javascript"
+      src="{% static 'js/jquery-3.4.1.min.js' %}"
+    ></script>
+    <!-- popper js -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <!-- bootstrap js -->
+    <script
+      type="text/javascript"
+      src="{% static 'js/bootstrap.js' %}"
+    ></script>
+    <!-- owl slider -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    ></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+    <!-- Google Map -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+    <!-- End Google Map -->
+  </body>
 </html>
