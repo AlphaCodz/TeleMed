@@ -32,7 +32,7 @@ STATIC_ROOT= os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY=env("SECRET_KEY")
+SECRET_KEY="django-insecure-pjfr_q98_9_myyu8xtj@y98n3bo&qcs17)7lw%404f)x)*6-a-"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
